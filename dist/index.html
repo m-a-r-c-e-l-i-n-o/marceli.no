@@ -1,0 +1,82 @@
+<!DOCTYPE html public "Created by Marcelino Torres Braulio">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The homepage of Marcelino Torres Braulio</title>
+    <meta name="description" content="Marcelino Torres Braulio is a self employed Software Engineer with diverse interests and ambitions for the future. With a deep fascination for philanthropy, philosophy, and psychology, he aims to provide technological solutions to humanity's most ambiguous problems... starting with his own industry. Stay tuned.">
+    <meta name="viewport" content="width=1000">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="profile-image-container">
+            <img src="/images/profile-image.png">
+        </div>
+        <div id="social-media">
+            <button class="icon" title="Facebook Profile">
+                <a href="/facebook">
+                    <i class="fa fa-3x fa-facebook" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button class="icon" title="Twitter Profile">
+                <a href="/twitter">
+                    <i class="fa fa-3x fa-twitter" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button class="icon" title="LinkedIn Profile">
+                <a href="/linkedin">
+                    <i class="fa fa-3x fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button class="icon" title="GitHub Profile">
+                <a href="/github">
+                    <i class="fa fa-3x fa-github" aria-hidden="true"></i>
+                </a>
+            </button>
+            <button class="icon" title="Resume">
+                <a id="download-resume" href="/documents/marceli.no-resumes.zip">
+                    <i class="fa fa-3x fa-file-text" aria-hidden="true"></i>
+                </a>
+            </button>
+        </div>
+        <div id="intro-container">
+            <div id="intro" data-text="The many thoughts of Marcelino. Coming soon."></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+
+        // typewriter animation
+        (function ($) {
+            var windowWidth = $(window).width()
+            var intro = $('#intro')
+
+            if (windowWidth > 1280) {
+                intro.css({'font-size': 32, 'width': 872})
+            }
+            function typeWriter(text, n) {
+                if (n < (text.length)) {
+                    intro.html(text.substring(0, n+1) + '<span class="blink">_</span>')
+                    n++
+                    setTimeout(function() {
+                        typeWriter(text, n)
+                    }, 100)
+                }
+            }
+            typeWriter(intro.data('text'), 0)
+        })(jQuery);
+
+        // resume download
+        (function ($) {
+            var downloadResume = $('#download-resume')
+            downloadResume.on('click', function () {
+                window.open('/documents/marceli.no-creative-resume.pdf')
+                window.open('/documents/marceli.no-plain-resume.pdf')
+            })
+        })(jQuery)
+    </script>
+</body>
+</html>

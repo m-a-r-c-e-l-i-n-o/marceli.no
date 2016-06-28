@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #DEE3EF;
+	font-family: 'Cutive Mono', serif;
+	font-size: 28px;
+	font-color: #333333;
+	font-weight: bold;
+}
+
+#container {
+	width: 960px;
+	margin: 0px auto;
+}
+
+#profile-image-container {
+	position: relative;
+	margin: 0px auto;
+	margin-top: 2%;
+	width: 450px;
+	height: 450px;
+}
+
+#profile-image-container img {
+	position: absolute;
+}
+
+#social-media {
+	position: relative;
+	text-align: center;
+	margin-top: 2%;
+}
+
+#social-media .icon {
+	display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    background: none;
+    border: none;
+}
+
+#social-media .icon a, #social-media .icon a:visited {
+    color: #333;
+}
+
+#social-media .icon, #social-media .icon a:hover {
+    color: #555;
+}
+
+#intro {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: left;
+    width: 860px;
+    height: 74px;
+    color: #333;
+}
+
+.blink {
+    -webkit-animation: blink 1.3s step-start 0s infinite;
+    -moz-animation: blink 1.3s step-start 0s infinite;
+    -ms-animation: blink 1.3s step-start 0s infinite;
+    -o-animation: blink 1.3s step-start 0s infinite;
+    animation: blink 1.3s step-start 0s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0.0; }
+    50% { opacity: 1.0; }
+    100% { opacity: 0.0; }
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 0.0; }
+    50% { opacity: 1.0; }
+    100% { opacity: 0.0; }
+}

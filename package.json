@@ -1,0 +1,13 @@
+{
+  "name": "marceli.no",
+  "version": "0.0.0",
+  "description": "The homepage of Marcelino Torres Braulio",
+  "scripts": {
+    "sync": "s3-cli sync ./dist s3://marceli.no/ --delete-removed --acl-public"
+  },
+  "author": "m-a-r-c-e-l-i-n-o <me@marceli.no>",
+  "license": "MIT",
+  "dependencies": {
+    "s3-cli": "^0.13.0"
+  }
+}
